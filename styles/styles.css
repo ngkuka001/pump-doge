@@ -1,0 +1,401 @@
+@font-face {
+  font-family: Cunia;
+  src: url("../resources/font/Cunia.html");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../resources/font/Montserrat.html");
+}
+:root {
+  --black: #191919;
+  --lightblack: #333333;
+  --orange: #fa6618;
+  --white: #ffe5e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  transition: 0.25s ease;
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  padding: 10px 60px;
+  border: 3px solid var(--black);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  width: max-content;
+}
+
+.button:hover {
+  background-color: var(--black);
+  color: white;
+}
+
+/*
+  Toggle Navbar CSS
+ */
+.navbarToggle {
+  height: 100vh;
+  background-color: var(--black) !important;
+}
+.navbarToggle #navigation #logo {
+  background-color: var(--white);
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+.navbarToggle #navigation #burgermenu div span {
+  border-color: var(--white);
+  background-color: var(--white);
+}
+.nav-filled {
+  background-color: #bfcbc7;
+}
+
+.burgermenuToggle :nth-child(1) {
+  width: 25px !important;
+  transform: rotate(45deg) translateY(11px);
+}
+.burgermenuToggle :nth-child(2) {
+  opacity: 0;
+}
+.burgermenuToggle :nth-child(3) {
+  width: 25px !important;
+  transform: rotate(-45deg) translateY(-11px);
+}
+
+body header {
+  z-index: 10;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+}
+body header #navigation {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+@media (max-width: 991.98px) {
+  body header #navigation {
+    padding: 0 40px;
+  }
+}
+body header #navigation #logo a {
+  display: flex;
+  align-items: center;
+}
+body header #navigation #logo a img {
+  height: 50px;
+}
+body header #navigation #logo a p {
+  font-family: Cunia;
+  margin-left: 10px;
+  font-size: 18px;
+}
+body header #navigation #links a {
+  margin: 0 13px;
+  font-weight: 500;
+}
+body header #navigation #links :hover {
+  color: var(--lightblack);
+}
+@media (max-width: 991.98px) {
+  body header #navigation #links {
+    display: none;
+  }
+}
+body header #navigation #socials {
+  display: flex;
+  align-items: center;
+}
+body header #navigation #socials a {
+  margin-right: 30px;
+}
+body header #navigation #socials a img {
+  height: 24px;
+}
+body header #navigation #socials a .twitter {
+  height: 30px;
+}
+@media (max-width: 991.98px) {
+  body header #navigation #socials {
+    display: none;
+  }
+}
+body header #navigation #burgermenu div {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body header #navigation #burgermenu div span {
+  display: block;
+  width: 20px;
+  border: 2px solid var(--black);
+  background-color: var(--black);
+  border-radius: 50px;
+}
+body header #navigation #burgermenu :hover {
+  cursor: pointer;
+}
+@media (min-width: 991.98px) {
+  body header #navigation #burgermenu {
+    display: none;
+  }
+}
+body header #mobilenav {
+  height: calc(100vh - 80px);
+}
+body header #mobilenav > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body header #mobilenav > div #mobilelinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header #mobilenav > div #mobilelinks a {
+  margin: 20px 0;
+  font-size: 24px;
+  color: var(--white);
+}
+body header #mobilenav > div #mobilelinks :hover {
+  color: var(--orange);
+}
+body header #mobilenav > div #mobilesocials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+body header #mobilenav > div #mobilesocials a img {
+  width: 30px;
+  margin-bottom: 20px;
+}
+body header #mobilenav > div #mobilesocials a {
+  color: var(--white);
+  border-color: var(--white);
+}
+body header #mobilenav > div #mobilesocials :hover {
+  border-color: var(--orange);
+}
+body main #landingsection {
+  height: 100vh;
+  position: relative;
+  background: #bfcbc7;
+  background: -moz-linear-gradient(120deg, #bfcbc7 26%, #bfcbc7 100%);
+  background: -webkit-linear-gradient(120deg, #bfcbc7 26%, #bfcbc7 100%);
+  background: linear-gradient(120deg, #bfcbc7 26%, #bfcbc7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bfcbc7", endColorstr="#bfcbc7", GradientType=1);
+}
+body main #landingsection > div {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+}
+body main #landingsection > div h1 {
+  font-family: Cunia;
+  font-size: 100px;
+}
+body main #landingsection > div p {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  body main #landingsection > div {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  body main #landingsection > div h1 {
+    font-size: 55px;
+  }
+  body main #landingsection > div p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+body main #landingsection img {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+}
+@media (max-width: 767.98px) {
+  body main #landingsection img {
+    width: 70%;
+  }
+}
+body main #roadmap #roadmapdesktop {
+  width: 100%;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 767.98px) {
+  body main #roadmap #roadmapdesktop {
+    display: none;
+  }
+}
+body main #roadmap #roadmapmobile {
+  display: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 767.98px) {
+  body main #roadmap #roadmapmobile {
+    display: block;
+    width: 100%;
+  }
+}
+body main #tokenomics #tokenomicsdesktop {
+  width: 100%;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 767.98px) {
+  body main #tokenomics #tokenomicsdesktop {
+    display: none;
+  }
+}
+body main #tokenomics #tokenomicsmobile {
+  display: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+@media (max-width: 767.98px) {
+  body main #tokenomics #tokenomicsmobile {
+    display: block;
+    width: 100%;
+  }
+}
+body main #faq {
+  background-color: var(--black);
+}
+body main #faq > div {
+  width: 78%;
+  margin: auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 767.98px) {
+  body main #faq > div {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 90%;
+  }
+}
+body main #faq > div #faqdesktop {
+  font-family: Cunia;
+  color: var(--orange);
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+@media (max-width: 992px) {
+  body main #faq > div #faqdesktop {
+    display: none;
+  }
+}
+body main #faq > div #faqmobile {
+  font-family: Cunia;
+  color: var(--orange);
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 70px;
+  display: none;
+}
+@media (max-width: 992px) {
+  body main #faq > div #faqmobile {
+    display: block;
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 767.98px) {
+  body main #faq > div #faqmobile {
+    margin-bottom: 40px;
+  }
+}
+body main #faq > div > div {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  body main #faq > div > div {
+    width: 100%;
+  }
+}
+body main #faq > div > div > div {
+  padding: 25px 25px;
+  flex-basis: 400px;
+  flex-grow: 1;
+}
+body main #faq > div > div > div h2 {
+  font-family: Cunia;
+  color: var(--white);
+  padding-bottom: 20px;
+}
+body main #faq > div > div > div p {
+  color: var(--white);
+}
+body footer {
+  width: 100%;
+  background-color: var(--orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer div {
+  padding: 20px 80px;
+}
+body footer div p {
+  font-size: 14px;
+}
+body footer div a img {
+  height: 20px;
+}
+body footer div a .twitter {
+  padding-right: 10px;
+  height: 24px;
+}
+@media (max-width: 767.98px) {
+  body footer div {
+    padding: 20px 30px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
